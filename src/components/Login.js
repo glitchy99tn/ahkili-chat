@@ -11,22 +11,23 @@ const Login = () =>{
         <div id="login-page">
             <div id="login-card">
                 <h2>Welcome to Ahkili!</h2>
-
+                <button onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}>
                 <div
                     className="login-button google"
-                    onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
                 >
                     <GoogleOutlined /> Sign In with Google
                 </div>
-
+                </button>
                 <br /> <br  />
 
+                <button onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}>
                 <div
                     className="login-button facebook"
-                    onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
                 >
                     <FacebookOutlined /> Sign In with Facebook
                 </div>
+                </button>   
+
                 
             </div>
 
